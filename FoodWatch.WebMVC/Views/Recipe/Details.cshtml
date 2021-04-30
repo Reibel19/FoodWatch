@@ -1,0 +1,98 @@
+﻿@model FoodWatch.Models.Recipe.RecipeDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RecipeDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RecipeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecipeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalServings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalServings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCalories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCalories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCarbs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCarbs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalProtein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalProtein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalFat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalFat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CookTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CookTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructions)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RecipeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
