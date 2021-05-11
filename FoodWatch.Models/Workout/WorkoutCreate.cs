@@ -14,6 +14,7 @@ namespace FoodWatch.Models.Workout
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string Name { get; set; }
         [Required]
+        [Display(Name = "Time (mins)")]
         public int Time { get; set; }
         [Required]
         public string Type { get; set; }

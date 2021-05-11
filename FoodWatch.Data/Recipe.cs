@@ -33,5 +33,7 @@ namespace FoodWatch.Data
         public string Instructions { get; set; }
         //foreign key Food
         //virtual list of Food
+        public virtual ICollection<Food> Ingredients { get; set; } = new List<Food>();
+
     }
 }

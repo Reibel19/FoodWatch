@@ -10,5 +10,6 @@ namespace FoodWatch.Models.Food
     {
         public int FoodId { get; set; }
         public string Name { get; set; }
+        public string Recipe { get; set; }
     }
 }

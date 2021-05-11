@@ -56,13 +56,9 @@
   <ItemGroup>
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202104291715249_food-updated.cs" />
-    <Compile Include="Migrations\202104291715249_food-updated.Designer.cs">
-      <DependentUpon>202104291715249_food-updated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104300025584_recipe-workout.cs" />
-    <Compile Include="Migrations\202104300025584_recipe-workout.Designer.cs">
-      <DependentUpon>202104300025584_recipe-workout.cs</DependentUpon>
+    <Compile Include="Migrations\202105101705303_initial.cs" />
+    <Compile Include="Migrations\202105101705303_initial.Designer.cs">
+      <DependentUpon>202105101705303_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104291715249_food-updated.resx">
-      <DependentUpon>202104291715249_food-updated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104300025584_recipe-workout.resx">
-      <DependentUpon>202104300025584_recipe-workout.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105101705303_initial.resx">
+      <DependentUpon>202105101705303_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

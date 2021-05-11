@@ -4,12 +4,34 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="workout-header-index">Workouts</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+<div class="workout-board">
+    @foreach (var item in Model)
+    {
+        <div class="card-container col-md-3 col-sm-6">
+            <div class="workout-card">
+                <div class="workout-head text-center">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div>
+                <div class="workout-body text-center">
+                    <p>@Html.DisplayFor(modelItem => item.Time) mins </p>
+                    <div class="recipe-tools">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.WorkoutId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.WorkoutId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.WorkoutId })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.WorkoutId)
@@ -42,4 +64,4 @@
     </tr>
 }
 
-</table>
+</table>*@

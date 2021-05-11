@@ -28,7 +28,8 @@ namespace FoodWatch.Services
                 CaloriesPerServing = model.CaloriesPerServing,
                 CarbsPerServing = model.CarbsPerServing,
                 ProteinPerServing = model.ProteinPerServing,
-                FatPerServing = model.FatPerServing
+                FatPerServing = model.FatPerServing,
+                RecipeId = model.RecipeId
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -48,7 +49,8 @@ namespace FoodWatch.Services
                                 .Select(e => new FoodListItem
                                 {
                                     FoodId = e.FoodId,
-                                    Name = e.Name
+                                    Name = e.Name,
+                                    Recipe = e.RecipeId + " " + e.Recipe.Name
                                 });
                 return query.ToArray();
             }
@@ -70,7 +72,8 @@ namespace FoodWatch.Services
                     CaloriesPerServing = entity.CaloriesPerServing,
                     CarbsPerServing = entity.CarbsPerServing,
                     ProteinPerServing = entity.ProteinPerServing,
-                    FatPerServing = entity.FatPerServing
+                    FatPerServing = entity.FatPerServing,
+                    Recipe = entity.RecipeId + " " + entity.Recipe.Name
                 };
             }
         }
@@ -89,6 +92,7 @@ namespace FoodWatch.Services
                 entity.CarbsPerServing = model.CarbsPerServing;
                 entity.ProteinPerServing = model.ProteinPerServing;
                 entity.FatPerServing = model.FatPerServing;
+                entity.RecipeId = model.RecipeId;
 
                 return ctx.SaveChanges() == 1;
             }

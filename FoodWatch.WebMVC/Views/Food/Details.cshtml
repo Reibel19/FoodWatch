@@ -39,7 +39,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CostPerServing)
+            $@Html.DisplayFor(model => model.CostPerServing)
         </dd>
 
         <dt>
@@ -55,7 +55,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CarbsPerServing)
+            @Html.DisplayFor(model => model.CarbsPerServing) g
         </dd>
 
         <dt>
@@ -63,7 +63,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ProteinPerServing)
+            @Html.DisplayFor(model => model.ProteinPerServing) g
         </dd>
 
         <dt>
@@ -71,7 +71,15 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FatPerServing)
+            @Html.DisplayFor(model => model.FatPerServing) g
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recipe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recipe)
         </dd>
 
     </dl>

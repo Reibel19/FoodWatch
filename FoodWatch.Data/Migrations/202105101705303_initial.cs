@@ -3,7 +3,7 @@ namespace FoodWatch.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class foodupdated : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -20,14 +20,27 @@ namespace FoodWatch.Data.Migrations
                         CarbsPerServing = c.Int(nullable: false),
                         ProteinPerServing = c.Int(nullable: false),
                         FatPerServing = c.Int(nullable: false),
+                        RecipeId = c.Int(),
                     })
-                .PrimaryKey(t => t.FoodId);
+                .PrimaryKey(t => t.FoodId)
+                .ForeignKey("dbo.Recipe", t => t.RecipeId)
+                .Index(t => t.RecipeId);
             
             CreateTable(
                 "dbo.Recipe",
                 c => new
                     {
                         RecipeId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
+                        Name = c.String(nullable: false),
+                        TotalServings = c.Int(nullable: false),
+                        TotalCost = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        TotalCalories = c.Int(nullable: false),
+                        TotalCarbs = c.Int(nullable: false),
+                        TotalProtein = c.Int(nullable: false),
+                        TotalFat = c.Int(nullable: false),
+                        CookTime = c.Int(nullable: false),
+                        Instructions = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.RecipeId);
             
@@ -106,6 +119,12 @@ namespace FoodWatch.Data.Migrations
                 c => new
                     {
                         WorkoutId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
+                        Name = c.String(nullable: false),
+                        Time = c.Int(nullable: false),
+                        Type = c.String(nullable: false),
+                        Intensity = c.String(nullable: false),
+                        Details = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.WorkoutId);
             
@@ -117,10 +136,12 @@ namespace FoodWatch.Data.Migrations
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
+            DropForeignKey("dbo.Food", "RecipeId", "dbo.Recipe");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
+            DropIndex("dbo.Food", new[] { "RecipeId" });
             DropTable("dbo.Workout");
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");

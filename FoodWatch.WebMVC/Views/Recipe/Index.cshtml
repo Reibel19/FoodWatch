@@ -4,22 +4,34 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="recipe-header-index">Recipes</h2>
 
-<p>
+<p class="recipe-create-new">
     @Html.ActionLink("Create New", "Create")
 </p>
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
 
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
-    </div>
-}
-<table class="table">
+<div class="recipe-board">
+    @foreach (var item in Model)
+    {
+        <div class="card-container col-md-3 col-sm-6">
+            <div class="recipe-card">
+                <div class="recipe-head text-center">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div>
+                <div class="recipe-body text-center">
+                    <p>@Html.DisplayFor(modelItem => item.CookTime) mins </p>
+                    <div class="recipe-tools">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.RecipeId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.RecipeId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.RecipeId })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.RecipeId)
@@ -53,4 +65,4 @@
         </tr>
     }
 
-</table>
+</table>*@

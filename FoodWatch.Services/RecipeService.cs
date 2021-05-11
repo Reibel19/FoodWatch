@@ -75,7 +75,13 @@ namespace FoodWatch.Services
                     TotalProtein = entity.TotalProtein,
                     TotalFat = entity.TotalFat,
                     CookTime = entity.CookTime,
-                    Instructions = entity.Instructions
+                    Instructions = entity.Instructions,
+                    Ingredients = entity.Ingredients.Select(e => new Models.Food.FoodListItem()
+                    {
+                        FoodId = e.FoodId,
+                        Name = e.Name,
+                        Recipe = e.Recipe.RecipeId + " " + e.Recipe.Name
+                    }).ToList()
                 };
             }
         }

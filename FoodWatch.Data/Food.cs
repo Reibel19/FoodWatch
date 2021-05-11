@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,5 +30,10 @@ namespace FoodWatch.Data
         public int FatPerServing { get; set; }
 
         //do the int properties for macros per serving need to be ?nullable or is requiring an amount that could be zero pass????
+
+        [ForeignKey(nameof(Recipe))]
+        public int? RecipeId { get; set; }
+        public virtual Recipe Recipe { get; set; } = new Recipe();
+
     }
 }

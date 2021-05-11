@@ -182,6 +182,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assets\Wood.jpg" />
+    <Content Include="Content\Assets\Cork.jpg" />
+    <Content Include="Content\Assets\Foliage.jpg" />
+    <Content Include="Content\Assets\Stone.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -237,6 +241,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Workout\Index.cshtml" />
+    <Content Include="Views\Workout\Create.cshtml" />
+    <Content Include="Views\Workout\Details.cshtml" />
+    <Content Include="Views\Workout\Edit.cshtml" />
+    <Content Include="Views\Workout\Delete.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
     <Content Include="Views\Food\Details.cshtml" />
@@ -247,11 +256,6 @@
     <Content Include="Views\Recipe\Details.cshtml" />
     <Content Include="Views\Recipe\Edit.cshtml" />
     <Content Include="Views\Recipe\Delete.cshtml" />
-    <Content Include="Views\Workout\Index.cshtml" />
-    <Content Include="Views\Workout\Create.cshtml" />
-    <Content Include="Views\Workout\Details.cshtml" />
-    <Content Include="Views\Workout\Edit.cshtml" />
-    <Content Include="Views\Workout\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

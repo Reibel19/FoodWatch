@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('Assets/Wood.jpg');
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,84 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.recipe-board {
+    background-image: url('Assets/Foliage.jpg');
+    border: 2px solid black;
+    display: table;
+    padding-top: 2em;
+}
+
+.recipe-card {
+    border: 1px solid black;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    border-radius: 1em;
+    background-image: url('Assets/Cork.jpg');
+    min-height: 5em;
+    min-width: 10em;
+}
+
+.recipe-create-new {
+    color: black;
+}
+
+.recipe-header-index {
+    color: black;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.food-board {
+    background-image: url('Assets/Foliage.jpg');
+    border: 2px solid black;
+    display: table;
+    padding-top: 2em;
+}
+
+.food-card {
+    border: 1px solid black;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    border-radius: 1em;
+    background-image: url('Assets/Cork.jpg');
+    min-height: 5em;
+    min-width: 10em;
+}
+
+.food-header-index {
+    color: black;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.workout-board {
+    background-image: url('Assets/Foliage.jpg');
+    border: 2px solid black;
+    display: table;
+    padding-top: 2em;
+}
+
+.workout-card {
+    border: 1px solid black;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    border-radius: 1em;
+    background-image: url('Assets/Cork.jpg');
+    min-height: 5em;
+    min-width: 10em;
+}
+
+.workout-header-index {
+    color: black;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.jumbotron {
+    background-image: url('Assets/Cork.jpg');
 }
