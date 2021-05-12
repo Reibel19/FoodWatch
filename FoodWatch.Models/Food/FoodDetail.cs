@@ -31,5 +31,8 @@ namespace FoodWatch.Models.Food
         [Display(Name = "Fat Per Serving")]
         public int FatPerServing { get; set; }
         public string Recipe { get; set; }
+
+        //There's a cool data annotation that will display your decimals as a currency:        [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+
     }
 }

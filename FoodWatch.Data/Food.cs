@@ -33,7 +33,14 @@ namespace FoodWatch.Data
 
         [ForeignKey(nameof(Recipe))]
         public int? RecipeId { get; set; }
-        public virtual Recipe Recipe { get; set; } = new Recipe();
+        //public virtual Recipe Recipe { get; set; } = new Recipe();
+        public virtual Recipe Recipe { get; set; }
 
+
+        //public virtual ICollection<Recipe> Recipes { get; set; }
+        //public Food()
+        //{
+        //    Recipes = new HashSet<Recipe>();
+        //}
     }
 }

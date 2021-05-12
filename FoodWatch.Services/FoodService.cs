@@ -63,6 +63,12 @@ namespace FoodWatch.Services
                 var entity = ctx
                                 .Foods
                                 .Single(e => e.FoodId == id && e.OwnerId == _userId);
+                
+                if(entity.Recipe == null)
+                {
+                    entity.Recipe = new Recipe();
+                }
+
                 return new FoodDetail
                 {
                     FoodId = entity.FoodId,

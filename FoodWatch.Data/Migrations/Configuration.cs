@@ -10,6 +10,7 @@ namespace FoodWatch.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "FoodWatch.Data.ApplicationDbContext";
         }
 
         protected override void Seed(FoodWatch.Data.ApplicationDbContext context)
