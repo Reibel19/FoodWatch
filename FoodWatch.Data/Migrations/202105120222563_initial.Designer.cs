@@ -7,13 +7,13 @@ namespace FoodWatch.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class foodrecipes : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(foodrecipes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105112105314_foodrecipes"; }
+            get { return "202105120222563_initial"; }
         }
         
         string IMigrationMetadata.Source
